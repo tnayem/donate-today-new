@@ -1,12 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
 import Banner from '../Banner/Banner';
 import Donates from '../Donates/Donates';
 
 const Home = () => {
+    const [query,setQuery] = useState("")
+    
     return (
         <div>
-            <Banner></Banner>
-            <Donates></Donates>
+            <Banner setQuery={setQuery} ></Banner>
+            <Donates query = {query} setQuery={setQuery} ></Donates>
         </div>
     );
 };
